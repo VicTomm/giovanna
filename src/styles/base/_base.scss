@@ -13,7 +13,7 @@ body {
   transition-delay: $transition-duration;
 }
 
-.giovanna-appear.giovanna-appear-active {
+.giovanna-appear.giovanna-appear-active{
   opacity: 1;
   transform: none;
 }
@@ -115,10 +115,24 @@ body {
 	font-size: 1.75rem;
 	line-height: 1.9375rem;
 	font-weight: bold;
+	cursor: pointer;
+}
+
+.work-image{
+	max-width: 77%;
+	margin: 0 auto;
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.work-wrapper{
+	max-height: 500px;
 }
 
 .projects{
-	height: 505px;
+	height: 515px;
 	overflow:   hidden;
 	::-webkit-scrollbar {
     width: 0px;
