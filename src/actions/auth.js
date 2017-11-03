@@ -6,7 +6,7 @@ export const startLogin = () => {
   return () => {
     return firebase
       .auth()
-      .signInWithEmailAndPassword("vtomm6575@gmail.com", "vic657545A")
+      .signInWithEmailAndPassword("", "")
       .then(function (firebaseUser) {})
       .catch(function (error) {
         // Handle Errors here.
