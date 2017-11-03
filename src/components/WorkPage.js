@@ -28,7 +28,24 @@ export class WorkPage extends React.Component {
                 transitionEnter={true}
                 transitionLeave={true}>
                 <div className="column is-12">
-                    <div className="columns">
+                    <div className="column is-8 is-offset-2 show-for-mobile">
+                        {
+                            this.props.projects.length === 0
+                            ? (
+                                <div className="list-item list-item--message">
+                                    <span>No projects</span>
+                                </div>
+                            )
+                            : (this.props.projects.map((project) => {
+                                return <span
+                                    key={project.id}
+                                    onClick={this
+                                    .onProjectClick
+                                    .bind(this, project.imagePath, project.type, project.name)}><Work {...project}/></span>;
+                            }))
+                        }
+                    </div>
+                    <div className="columns show-for-desktop">
                         <div className="column is-6">
                             <ProjectImage {...this.state}/>
                         </div>
