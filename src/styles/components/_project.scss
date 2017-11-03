@@ -1,0 +1,29 @@
+.image-project{
+    width: 480px;
+}
+
+.projects{
+	height: 515px;
+	overflow:   hidden;
+	::-webkit-scrollbar {
+    width: 0px;
+    background: none; /* make scrollbar transparent */
+	}
+}
+
+.container1{
+	height: 100%;
+	position: absolute;
+	overflow: auto;
+	
+}
+
+.container2{
+	overflow: hidden;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: -15px;
+	position: relative;
+	
+}

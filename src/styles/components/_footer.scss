@@ -1,0 +1,41 @@
+.footer{
+	background-color: $white;
+	padding: 1rem 1.5rem 2rem;
+	@media(min-width: $desktop-breakpoint){
+		padding: 2rem 1.5rem 2rem;
+	}
+	.giovanna-contact{
+		font-size:$font-size-large;
+	}
+	.facebook{
+		&:hover{
+			color: $facebook-color;
+		}
+	}
+	.twitter{
+		&:hover{
+			color: $twitter-color;
+		}
+	}
+	.instagram{
+		&:hover{
+			color: $instagram-color;
+		}
+	}
+	.envelope{
+		&:hover{
+			color: $giovanna-pink;
+		}
+	}
+
+	.icon{
+		padding: 20px;
+		&:hover{
+			cursor: pointer;
+			-webkit-transition: background-color 2s ease-out;
+			-moz-transition: background-color 2s ease-out;
+			-o-transition: background-color 2s ease-out;
+			transition: background-color 2s ease-out;
+		}
+	}
+}

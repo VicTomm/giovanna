@@ -1,0 +1,48 @@
+.giovanna__title{
+	font-size: 5rem;
+	margin-bottom: 5px;
+	@media(min-width: $desktop-breakpoint){
+		font-size: 7rem;
+	}
+}
+.giovanna__subtitle{
+	font-size: 4.25rem;
+	@media(min-width: $desktop-breakpoint){
+		font-size: 6.25rem;
+	}
+}
+
+.giovanna-logo{
+	height: 250px;
+}
+
+.giovanna-button{
+	background: $blue;
+	border: none;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.giovanna-button-edit{
+	margin-top: 10px;
+	width: 100%;
+}
+
+.giovanna-button--link{
+	background: none;
+	color: $black;
+}
+
+.giovanna--link{
+	color: $black;
+	margin-right: 5px;
+}
+
+.giovanna-profile-container{
+	margin: 0 auto;
+}
+
+.giovanna-profile{
+	width: 260px;
+	border-radius: 50%;
+}

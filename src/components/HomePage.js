@@ -10,7 +10,6 @@ export const HomePage = () => (
         transitionLeaveTimeout={300}
         transitionEnter={true}
         transitionLeave={true}>
-        <div className="container has-text-centered">
             <h1 className="title giovanna__title">
                 Giovanna
             </h1>
@@ -18,7 +17,6 @@ export const HomePage = () => (
             <h2 className="subtitle giovanna__subtitle">
                 Tommasi
             </h2>
-        </div>
         </ReactCSSTransitionGroup>
 );
 

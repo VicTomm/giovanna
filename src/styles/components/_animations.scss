@@ -1,0 +1,20 @@
+.giovanna-appear {
+	opacity: 0;
+  transform: translateY(-10rem);
+  transition: all $transition-duration ease-out;
+  transition-delay: $transition-duration;
+}
+
+.giovanna-appear.giovanna-appear-active{
+  opacity: 1;
+  transform: none;
+}
+
+.giovanna-leave{
+	opacity: 1;
+  transition: all $transition-duration linear;
+}
+
+.giovanna-leave.giovanna-leave-active {
+  opacity: 0;
+}

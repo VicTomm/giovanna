@@ -1,0 +1,19 @@
+.work-title{
+	font-size: 1.75rem;
+	line-height: 1.9375rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.work-image{
+	max-width: 77%;
+	margin: 0 auto;
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.work-wrapper{
+	max-height: 500px;
+}

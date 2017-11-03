@@ -4,6 +4,18 @@ import {connect} from 'react-redux';
 import {startLogout} from '../actions/auth';
 
 export class Header extends React.Component {
+				constructor() {
+								super();
+								this.state = {
+												isActive: false
+								}
+				}
+
+				handleBurgerMenu = () => {
+								this.setState((prevState) => ({
+												isActive: !prevState.isActive
+								}));
+				};
 				onLogout = () => {
 								this
 												.props
@@ -11,33 +23,56 @@ export class Header extends React.Component {
 				};
 				render() {
 								return (
-												<header className="header">
-																<nav className="navbar" role="navigation" aria-label="main navigation">
+												<nav className="navbar">
+																<div className="container is-fluid">
 																				<div className="navbar-brand">
 																								<NavLink to="/" className="giovanna-headericon" activeClassName="is-active">
-																												<img
-																																src="/images/crabico.png"
-																																alt="crab"/>
+																												<img src="/images/crabico.png" alt="crab"/>
 																								</NavLink>
-																								<button className="button navbar-burger">
+																								<span onClick={this.handleBurgerMenu} className={"navbar-burger burger " + (this.state.isActive ? 'is-active' : '')} data-target="navbarMenuHeroC">
 																												<span></span>
 																												<span></span>
 																												<span></span>
-																								</button>
+																								</span>
 																				</div>
-																				<div className="navbar-menu">
-																								<div className="navbar-end">
+																				<div id="navbarMenuHeroC" className={"navbar-menu " + (this.state.isActive ? 'is-active' : '')}>
+																								<div className="navbar-end show-for-desktop">
 																												<div className="navbar-item is-hidden-desktop-only">
 																																{this.props.logout && <button
 																																				className="giovanna-button giovanna-button--link navbar-item"
 																																				onClick={this.onLogout}>Logout</button>}
+																												</div>
+																												<div className="navbar-item is-hidden-desktop-only">
 																																{this.props.logout && <Link className="navbar-item" to="/create">Add</Link>}
+																												</div>
+																												<div className="navbar-item is-hidden-desktop-only">
 																																{this.props.logout && <Link className="navbar-item" to="/projects">Projects</Link>}
 																												</div>
 																								</div>
+																								<div className="navbar-end show-for-mobile">
+																									<div className="navbar-item">
+																										<NavLink
+																														onClick={this.handleBurgerMenu}
+																														to="/works"
+																														className="giovanna-navbar-item"
+																														activeClassName="is-active">
+																														works
+																										</NavLink>
+																									</div>
+																									<div className="navbar-item">
+																										<NavLink
+																														onClick={this.handleBurgerMenu}
+																														to="/about"
+																														className="giovanna-navbar-item"
+																														activeClassName="is-active">
+																														about
+																										</NavLink>
+																									</div>
+																								</div>
+																								
 																				</div>
-																</nav>
-												</header>
+																</div>
+												</nav>
 								);
 				}
 }

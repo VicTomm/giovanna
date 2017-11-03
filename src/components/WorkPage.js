@@ -27,12 +27,12 @@ export class WorkPage extends React.Component {
                 transitionLeaveTimeout={300}
                 transitionEnter={true}
                 transitionLeave={true}>
-                <div className="container has-text-centered">
+                <div className="column is-12">
                     <div className="columns">
-                        <div className="column work-wrapper is-half giovanna-profile-container">
+                        <div className="column is-6">
                             <ProjectImage {...this.state}/>
                         </div>
-                        <div className="column projects">
+                        <div className="column is-6 projects">
                             <div className="container1">
                                 <div className="container2">
                                     {this.props.projects.length === 0

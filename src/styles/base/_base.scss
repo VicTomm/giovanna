@@ -6,244 +6,31 @@ body {
 	font-family: 'Yellowtail', cursive;
 }
 
-.giovanna-appear {
-	opacity: 0;
-  transform: translateY(-10rem);
-  transition: all $transition-duration ease-out;
-  transition-delay: $transition-duration;
+.level-item .title, .level-item .subtitle{
+	margin-bottom: 1rem;
 }
 
-.giovanna-appear.giovanna-appear-active{
-  opacity: 1;
-  transform: none;
+.hero-body {
+	padding: 2rem 1.5rem;
 }
 
-.giovanna-leave{
-	opacity: 1;
-  transition: all $transition-duration linear;
+.column-flex{
+	display: flex;
+	align-items: center;
 }
 
-.giovanna-leave.giovanna-leave-active {
-  opacity: 0;
-}
-
-
-
-.giovanna__title{
-	font-size: 7rem;
-}
-.giovanna__subtitle{
-	font-size: 6.25rem;
-}
-
-.giovanna-logo{
-	height: 250px;
-}
-
-.giovanna-navbar-item{
-	color: $black;
-	&::before, &::after{
-		content: '';
-		position: absolute;
-		width: 0%;
-		height: 1px;
-		top: 60%;
-		margin-top: -0.5px;
-		background: $black;
-	}
-	&::before{
-		left: -2.5px;
-	}
-
-	&::after{
-		right: 2.5px;
-		background: $black;
-		transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-	}
-
-	&:hover:before {
-		background: $black;
-		width: 100%;
-		transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-	  }
-	&:hover:after {
-		background: transparent;
-		width: 100%;
-		transition: 0s;
-	  }
-}
-
-.giovanna-button{
-	background: $blue;
-	border: none;
-	display: inline-block;
-	text-decoration: none;
-}
-
-.giovanna-button-edit{
-	width: 20%;
-}
-
-.giovanna-button--link{
-	background: none;
-	color: $black;
-}
-
-.giovanna--link{
-	color: $black;
-	margin-right: 5px;
-}
-
-.image-project{
-		width: 480px;
-}
-
-.giovanna-profile-container{
-	margin: 0 auto;
-}
-
-.giovanna-profile{
-	width: 260px;
-	border-radius: 50%;
-}
-
-.giovanna-headericon{
-	width:70px;
-}
-
-.work-title{
-	font-size: 1.75rem;
-	line-height: 1.9375rem;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-.work-image{
-	max-width: 77%;
-	margin: 0 auto;
-	img{
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-.work-wrapper{
-	max-height: 500px;
-}
-
-.projects{
-	height: 515px;
-	overflow:   hidden;
-	::-webkit-scrollbar {
-    width: 0px;
-    background: none; /* make scrollbar transparent */
-	}
-}
-
-.container1{
-	height: 100%;
-	position: absolute;
-	overflow: auto;
-	
-}
-
-.container2{
-	overflow: hidden;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: -15px;
-	position: relative;
-	
+.column-flex-right{
+	display: flex;
+	align-items:center;
 }
 
 .level-item__left{
-	transform: rotate(-90deg);
+	width:100%;
+	// transform: rotate(-90deg);
 }
 
 .level-item__right{
-	transform: rotate(90deg);
-}
-
-.footer{
-	background-color: $white;
-	padding: 2rem 1.5rem 2rem;
-	.giovanna-contact{
-		font-size:$font-size-large;
-	}
-	.facebook{
-		&:hover{
-			color: $facebook-color;
-		}
-	}
-	.twitter{
-		&:hover{
-			color: $twitter-color;
-		}
-	}
-	.instagram{
-		&:hover{
-			color: $instagram-color;
-		}
-	}
-	.envelope{
-		&:hover{
-			color: $giovanna-pink;
-		}
-	}
-
-	.icon{
-		padding: 20px;
-		&:hover{
-			cursor: pointer;
-			-webkit-transition: background-color 2s ease-out;
-			-moz-transition: background-color 2s ease-out;
-			-o-transition: background-color 2s ease-out;
-			transition: background-color 2s ease-out;
-		}
-	}
-}
-
-.loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 10px;
-  background: #3498DB;
-  border-radius: 5px;
-  animation: load $animation-duration ease-in-out infinite; 
-  &:before, &:after {
-    position: absolute; 
-    display: block;
-    content: "";
-    animation: load $animation-duration ease-in-out infinite;
-    height: 10px;
-    border-radius: 5px;
-  }
-    &:before {
-    top: -20px;
-    left: 10px;
-    width: 40px;
-    background: #EF4836;
-  }
-  &:after {
-    bottom: -20px;
-    width: 35px;
-    background: #F5AB35; 
-  }
-}
-
-@keyframes load {
-  0% {
-    transform: translateX(40px);
-  }
-  
-  50% {
-    transform: translateX(-30px);
-  }
-  100% {
-    transform: translateX(40px);
-  }
+	width:100%;
+	padding-right: 5px;
+	// transform: rotate(90deg);
 }

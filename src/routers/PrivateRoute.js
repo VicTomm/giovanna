@@ -14,42 +14,16 @@ export const PrivateRoute = ({
 	<Route {...rest} component={(props)=>(
 		isAuthenticated? (
 			<section className="hero is-fullheight">
-			<div className="hero-head">
-				<Header logout={true}/>
-			  </div>
+				<div className="hero-head">
+					<Header logout={true}/>
+			  	</div>
 			  <div className="hero-body">
-			  <div className="container is-fluid">
-				  <div className="level">
-					  <div className="level-left">
-						  <div className="level-item">
-							  <p className="subtitle is-4 level-item__left">
-								  <NavLink
-									  to="/works"
-									  className="giovanna-navbar-item"
-									  activeClassName="is-active">
-									  works
-								  </NavLink>
-							  </p>
-						  </div>
-					  </div>
-					  <div className="level-item app-body">
-					  <Component {...props} />
-					  </div>
-					  <div className="level-right">
-						  <div className="level-item">
-							  <p className="subtitle is-4 level-item__right">
-								  <NavLink
-									  to="/about"
-									  className="giovanna-navbar-item"
-									  activeClassName="is-active">
-									  about
-								  </NavLink>
-							  </p>
-						  </div>
+			  	<div className="container has-text-centered">
+					  <div className="column is-6 is-offset-3">
+						  <Component {...props} />
 					  </div>
 				  </div>
 			  </div>
-		  </div>
 			<Footer/>
 		  </section>
 			): (

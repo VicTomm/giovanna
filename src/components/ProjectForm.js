@@ -51,7 +51,7 @@ export default class ProjectForm extends React.Component {
 
     render() {
         return (
-            <div className="column is-half giovanna-profile-container">
+
                 <form className="form" onSubmit={this.onSubmit}>
                     <div className="field is-horizontal">
                         <div className="field-label is-normal">
@@ -124,8 +124,7 @@ export default class ProjectForm extends React.Component {
                             </div>
                         </div>
                     </div>
-                </form>
-            </div>
+                </form>            
         )
     }
 }

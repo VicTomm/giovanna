@@ -24,14 +24,12 @@ export class EditPojectPage extends React.Component {
     };
     render() {
         return (
-            <div className="container has-text-centered">
-                <div className="columns">
-                    <div className="column is-3 giovanna-profile-container">
-                        <img src={this.props.project.imagePath}/>
-                    </div>
-                    <ProjectForm project={this.props.project} onSubmit={this.onSubmit}/>
-                </div>
-                <button className="button giovanna-button-edit is-danger" onClick={this.onRemove}>Remove</button>
+            <div className="column is-8 is-offset-2">
+                <img src={this.props.project.imagePath}/>
+                <ProjectForm project={this.props.project} onSubmit={this.onSubmit}/>
+                <button
+                    className="button giovanna-button-edit is-danger"
+                    onClick={this.onRemove}>Remove</button>
             </div>
         );
     }
