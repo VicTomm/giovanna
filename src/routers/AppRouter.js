@@ -12,11 +12,12 @@ import ProjectsPage from '../components/ProjectsPage';
 import EditProjectPage from '../components/EditProjectPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
+import LazyLoad from 'react-lazyload';
 
 export const history = createHistory();
 
 const AppRouter = () => (
-    <Router history={history}>        
+        <Router history={history}>
             <Switch>
                 <PublicRoute path="/" component={HomePage} exact={true}/>
                 <PublicRoute path="/about" component={AboutPage}/>
@@ -24,10 +25,10 @@ const AppRouter = () => (
                 <PublicRoute path="/login" component={LoginPage} exact={true}/>
                 <PrivateRoute path="/create" component={AddProjectPage}/>
                 <PrivateRoute path="/projects" component={ProjectsPage}/>
-                <PrivateRoute path="/edit/:id" component={EditProjectPage} />
+                <PrivateRoute path="/edit/:id" component={EditProjectPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
-    </Router>
+        </Router>
 );
 
 export default AppRouter;

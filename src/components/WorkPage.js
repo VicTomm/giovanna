@@ -3,6 +3,11 @@ import {connect} from 'react-redux';
 import Work from './Work';
 import ProjectImage from './ProjectImage';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import LazyLoad from 'react-lazyload';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-105721907-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 export class WorkPage extends React.Component {
     constructor() {
@@ -29,21 +34,22 @@ export class WorkPage extends React.Component {
                 transitionLeave={true}>
                 <div className="column is-12">
                     <div className="column is-8 is-offset-2 show-for-mobile">
-                        {
-                            this.props.projects.length === 0
-                            ? (
-                                <div className="list-item list-item--message">
-                                    <span>No projects</span>
-                                </div>
-                            )
-                            : (this.props.projects.map((project) => {
-                                return <span
-                                    key={project.id}
-                                    onClick={this
-                                    .onProjectClick
-                                    .bind(this, project.imagePath, project.type, project.name)}><Work {...project}/></span>;
-                            }))
-                        }
+                        <LazyLoad once height={200}>
+                            {this.props.projects.length === 0
+                                ? (
+                                    <div className="list-item list-item--message">
+                                        <span>No projects</span>
+                                    </div>
+                                )
+                                : (this.props.projects.map((project) => {
+                                    return <span
+                                        key={project.id}
+                                        onClick={this
+                                        .onProjectClick
+                                        .bind(this, project.imagePath, project.type, project.name)}><Work {...project}/></span>;
+                                }))
+}
+                        </LazyLoad>
                     </div>
                     <div className="columns show-for-desktop">
                         <div className="column is-6">
