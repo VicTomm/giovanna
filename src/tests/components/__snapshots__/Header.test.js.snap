@@ -1,31 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header
-  className="header"
+<nav
+  className="navbar"
 >
   <div
-    className="content-container"
+    className="container is-fluid"
   >
     <div
-      className="header__content"
+      className="navbar-brand"
     >
-      <Link
-        className="header__title"
-        replace={false}
-        to="/dashboard"
+      <NavLink
+        activeClassName="is-active"
+        className="giovanna-headericon"
+        to="/"
       >
-        <h1>
-          BoilerPlate
-        </h1>
-      </Link>
-      <button
-        className="button button--link"
+        <img
+          alt="crab"
+          src="/images/crabico.png"
+        />
+      </NavLink>
+      <span
+        className="navbar-burger burger "
+        data-target="navbarMenuHeroC"
         onClick={[Function]}
       >
-        Logout
-      </button>
+        <span />
+        <span />
+        <span />
+      </span>
+    </div>
+    <div
+      className="navbar-menu "
+      id="navbarMenuHeroC"
+    >
+      <div
+        className="navbar-end show-for-desktop"
+      >
+        <div
+          className="navbar-item is-hidden-desktop-only"
+        />
+        <div
+          className="navbar-item is-hidden-desktop-only"
+        />
+        <div
+          className="navbar-item is-hidden-desktop-only"
+        />
+      </div>
+      <div
+        className="navbar-end show-for-mobile"
+      >
+        <div
+          className="navbar-item"
+        >
+          <NavLink
+            activeClassName="is-active"
+            className="giovanna-navbar-item"
+            onClick={[Function]}
+            to="/works"
+          >
+            works
+          </NavLink>
+        </div>
+        <div
+          className="navbar-item"
+        >
+          <NavLink
+            activeClassName="is-active"
+            className="giovanna-navbar-item"
+            onClick={[Function]}
+            to="/about"
+          >
+            about
+          </NavLink>
+        </div>
+      </div>
     </div>
   </div>
-</header>
+</nav>
 `;

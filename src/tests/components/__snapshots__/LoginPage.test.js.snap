@@ -2,24 +2,84 @@
 
 exports[`should correctly render LoginPage 1`] = `
 <div
-  className="box-layout"
+  className="column is-4 login-form"
 >
   <div
-    className="box-layout__box"
+    className="card"
   >
-    <h1
-      className="box-layout__title"
+    <header
+      className="card-header"
     >
-      Boilerplate
-    </h1>
-    <p>
-      Tag line for app
-    </p>
-    <button
-      className="button"
+      <p
+        className="card-header-title"
+      >
+        Giovanna Login
+      </p>
+    </header>
+    <div
+      className="card-content"
     >
-      Login with Google
-    </button>
+      <div
+        className="content"
+      >
+        <p>
+          Si no eres Giovanna Tommasi,
+          <br />
+          por favor alejate de esta sección gracias!
+          <br />
+          Los Amo!
+        </p>
+        <div
+          className="field"
+        >
+          <p
+            className="control has-icons-left has-icons-right"
+          >
+            <input
+              className="input"
+              placeholder="Email"
+              type="email"
+            />
+            <span
+              className="icon is-small is-left"
+            >
+              <i
+                className="fa fa-envelope"
+              />
+            </span>
+          </p>
+        </div>
+        <div
+          className="field"
+        >
+          <p
+            className="control has-icons-left"
+          >
+            <input
+              className="input"
+              placeholder="Password"
+              type="password"
+            />
+            <span
+              className="icon is-small is-left"
+            >
+              <i
+                className="fa fa-lock"
+              />
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer
+      className="card-footer"
+    >
+      <button
+        className="card-footer-item"
+      >
+        Login
+      </button>
+    </footer>
   </div>
 </div>
 `;

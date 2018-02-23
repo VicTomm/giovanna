@@ -2,11 +2,11 @@ import {firebase} from '../firebase/firebase';
 
 export const login = (uid) => ({type: 'LOGIN', uid});
 
-export const startLogin = () => {
+export const startLogin = (username, password) => {
   return () => {
     return firebase
       .auth()
-      .signInWithEmailAndPassword("", "")
+      .signInWithEmailAndPassword(username, password)
       .then(function (firebaseUser) {})
       .catch(function (error) {
         // Handle Errors here.

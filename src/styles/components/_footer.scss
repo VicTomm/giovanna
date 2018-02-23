@@ -8,24 +8,36 @@
 		font-size:$font-size-large;
 	}
 	.facebook{
-		&:hover{
-			color: $facebook-color;
+		a{
+			color: #000000;
+			&:hover{
+				color: $facebook-color;
+			}
 		}
 	}
 	.twitter{
-		&:hover{
+		a{
+			color: #000000;
+			&:hover{
 			color: $twitter-color;
 		}
 	}
+	}
 	.instagram{
+		a{
+			color: #000000;
 		&:hover{
 			color: $instagram-color;
 		}
 	}
+	}
 	.envelope{
+		a{
+			color: #000000;
 		&:hover{
 			color: $giovanna-pink;
 		}
+	}
 	}
 
 	.icon{
